@@ -38,3 +38,6 @@
     
 6. 再次运行，会继续报错：java.lang.UnsatisfiedLinkError: org.apache.hadoop.io.nativeio.NativeIO$Windows.access0(Ljava/lang/String;I)Z
     解决方案:直接下载：http://download.csdn.net/detail/u010435203/9606129.为NativeIO的java类，放到路径为org.apache.hadoop.io.nativeio的包下即可
+    
+7. 执行测试用例。  本地测试，配置configuration   例如：wordcount 输入参数的program arguments为 testfile/input/wordcount testfile/output/wordcount
+     集群或者伪集群：   hadoop jar hadoop-example.jar map.WordCount  /input /output
